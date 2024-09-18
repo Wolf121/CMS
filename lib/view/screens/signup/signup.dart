@@ -928,11 +928,11 @@ class _SignUpState extends State<SignUp> {
                                     height: 25,
                                     child: Checkbox(
                                       checkColor: greyColor,
-                                      fillColor: MaterialStateProperty
+                                      fillColor: WidgetStateProperty
                                           .resolveWith<Color>(
-                                              (Set<MaterialState> states) {
+                                              (Set<WidgetState> states) {
                                         if (states
-                                            .contains(MaterialState.disabled)) {
+                                            .contains(WidgetState.disabled)) {
                                           return drakGreyColor;
                                         }
                                         return appcolor;
@@ -1041,10 +1041,10 @@ class _SignUpState extends State<SignUp> {
                                           context, route, (route) => false);
                                     },
                                     style: ButtonStyle(
-                                      padding: MaterialStatePropertyAll(
+                                      padding: WidgetStatePropertyAll(
                                           EdgeInsets.zero),
                                       minimumSize:
-                                          MaterialStatePropertyAll(Size(10, 0)),
+                                          WidgetStatePropertyAll(Size(10, 0)),
                                       tapTargetSize:
                                           MaterialTapTargetSize.shrinkWrap,
                                       // padding: EdgeInsets.zero,

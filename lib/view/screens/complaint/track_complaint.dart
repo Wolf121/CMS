@@ -456,8 +456,7 @@ class _TrackComplaintsState extends State<TrackComplaints> {
                                             (complaintDetailData
                                                     .dataArray[index].status) ==
                                                 statusFil) &&
-                                        (dateFormatFil == null ||
-                                            dateFormatApi == dateFormatFil))
+                                        (dateFormatApi == dateFormatFil))
                                     ? TrackListWidget(
                                         fetchComplaintListDetailModel:
                                             fetchComplaintListDetailModel(),
@@ -558,8 +557,7 @@ class _TrackComplaintsState extends State<TrackComplaints> {
                                             (complaintDetailData
                                                     .dataArray[index].status) ==
                                                 statusFil) &&
-                                        (dateFormatFil == null ||
-                                            dateFormatApi == dateFormatFil))
+                                        (dateFormatApi == dateFormatFil))
                                     ? TrackListWidget(
                                         fetchComplaintListDetailModel:
                                             fetchComplaintListDetailModel(),
@@ -660,8 +658,7 @@ class _TrackComplaintsState extends State<TrackComplaints> {
                                             (complaintDetailData
                                                     .dataArray[index].status) ==
                                                 statusFil) &&
-                                        (dateFormatFil == null ||
-                                            dateFormatApi == dateFormatFil))
+                                        (dateFormatApi == dateFormatFil))
                                     ? TrackListWidget(
                                         fetchComplaintListDetailModel:
                                             fetchComplaintListDetailModel(),
@@ -763,8 +760,7 @@ class _TrackComplaintsState extends State<TrackComplaints> {
                                                     .dataArray[index]
                                                     .subcategory) ==
                                                 subCatFil) &&
-                                        (dateFormatFil == null ||
-                                            dateFormatApi == dateFormatFil))
+                                        (dateFormatApi == dateFormatFil))
                                     ? TrackListWidget(
                                         fetchComplaintListDetailModel:
                                             fetchComplaintListDetailModel(),
@@ -951,8 +947,7 @@ class _TrackComplaintsState extends State<TrackComplaints> {
                               } else {
                                 print('Conditiom else ');
                                 print('date val $dateFormatFil');
-                                return ((dateFormatFil == "2023-28-09" ||
-                                            dateFormatFil == null)
+                                return ((dateFormatFil == "2023-28-09")
                                         ? (refFil != "" ||
                                             catFil != "" ||
                                             subCatFil != "" ||

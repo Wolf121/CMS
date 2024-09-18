@@ -1809,12 +1809,12 @@ class _AddStaffState extends State<AddStaff> {
                                               : scheight / 35,
                                           child: Checkbox(
                                             checkColor: greyColor,
-                                            fillColor: MaterialStateProperty
+                                            fillColor: WidgetStateProperty
                                                 .resolveWith<Color>(
-                                                    (Set<MaterialState>
+                                                    (Set<WidgetState>
                                                         states) {
                                               if (states.contains(
-                                                  MaterialState.disabled)) {
+                                                  WidgetState.disabled)) {
                                                 return drakGreyColor;
                                               }
                                               return appcolor;

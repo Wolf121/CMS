@@ -307,13 +307,9 @@ class _SosHistoryState extends State<SosHistory> {
   }) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? savedData = prefs.getString('sosListData');
-    //print(date);
-    if (savedData == null) {
-      return []; // Return an empty list if no data is found in shared preferences
-    }
 
     try {
-      Map<String, dynamic> data = json.decode(savedData);
+      Map<String, dynamic> data = json.decode(savedData!);
 
       // Access the "data_array" key, which contains the list of SOS records.
       List<dynamic> dataArray = data['data_array'];
@@ -596,8 +592,7 @@ class _SosHistoryState extends State<SosHistory> {
                                         typeSelect.toLowerCase() ==
                                             sosListData.dataArray[index].name
                                                 .toLowerCase()) &&
-                                    (dateFormatFil == null ||
-                                        dateFormatApi == dateFormatFil))
+                                    (dateFormatApi == dateFormatFil))
                                 ? SosListWidget(
                                     index: index,
                                     sosCreatedAt:
@@ -679,8 +674,7 @@ class _SosHistoryState extends State<SosHistory> {
                                         typeSelect.toLowerCase() ==
                                             sosListData.dataArray[index].name
                                                 .toLowerCase()) &&
-                                    (dateFormatFil == null ||
-                                        dateFormatApi == dateFormatFil))
+                                    (dateFormatApi == dateFormatFil))
                                 ? SosListWidget(
                                     index: index,
                                     sosCreatedAt:
@@ -762,8 +756,7 @@ class _SosHistoryState extends State<SosHistory> {
                                         statusFilter.toLowerCase() ==
                                             sosListData.dataArray[index].status
                                                 .toLowerCase()) &&
-                                    (dateFormatFil == null ||
-                                        dateFormatApi == dateFormatFil))
+                                    (dateFormatApi == dateFormatFil))
                                 ? SosListWidget(
                                     index: index,
                                     sosCreatedAt:

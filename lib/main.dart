@@ -37,10 +37,10 @@ class _AppUpdateState extends State<AppUpdate> {
   Widget build(BuildContext context) {
     return UpgradeAlert(
         upgrader: Upgrader(
-          showIgnore: false,
-          showLater: false,
-          showReleaseNotes: false,
-          canDismissDialog: false,
+          // showIgnore: false,
+          // showLater: false,
+          // showReleaseNotes: false,
+          // canDismissDialog: false,
           durationUntilAlertAgain: const Duration(seconds: 1),
         ),
         child: Splach());

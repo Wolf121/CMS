@@ -262,11 +262,9 @@ class _SosFilterSearchState extends State<SosFilterSearch> {
                                           );
                                         },
                                       );
-                                      if (date != null) {
-                                        dateOfBirth.value = date
-                                            .toLocal(); // Convert to local time zone
-                                      }
-                                    },
+                                      dateOfBirth.value = date!
+                                          .toLocal(); // Convert to local time zone
+                                                                        },
                                     child: PickDate(date: formattedDate),
                                   );
                                 },

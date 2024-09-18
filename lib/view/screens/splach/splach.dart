@@ -35,10 +35,10 @@ class _SplachState extends State<Splach> {
         MaterialPageRoute(
             builder: (context) => UpgradeAlert(
                 upgrader: Upgrader(
-                  showIgnore: false,
-                  showLater: false,
-                  showReleaseNotes: false,
-                  canDismissDialog: false,
+                  // showIgnore: false,
+                  // showLater: false,
+                  // showReleaseNotes: false,
+                  // canDismissDialog: false,
                   durationUntilAlertAgain: const Duration(seconds: 1),
                 ),
                 child: BottomNavBar())),
@@ -49,10 +49,10 @@ class _SplachState extends State<Splach> {
         MaterialPageRoute(
             builder: (context) => UpgradeAlert(
                 upgrader: Upgrader(
-                  showIgnore: false,
-                  showLater: false,
-                  showReleaseNotes: false,
-                  canDismissDialog: false,
+                  // showIgnore: false,
+                  // showLater: false,
+                  // showReleaseNotes: false,
+                  // canDismissDialog: false,
                   durationUntilAlertAgain: const Duration(seconds: 1),
                 ),
                 child: LogIn())),

@@ -32,32 +32,28 @@ class _MosqueTimingsState extends State<MosqueTimings> {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String? token = prefs.getString('token');
 
-      if (token != null) {
-        final response = await http.get(
-          Uri.parse('http://110.93.244.74/api/dashboard/masjidtimings'),
-          headers: {'Authorization': 'Bearer $token'},
-        );
+      final response = await http.get(
+        Uri.parse('http://110.93.244.74/api/dashboard/masjidtimings'),
+        headers: {'Authorization': 'Bearer $token'},
+      );
 
-        if (response.statusCode == 200) {
-          final Map<String, dynamic> responseData = json.decode(response.body);
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> responseData = json.decode(response.body);
 
-          if (responseData['success'] == 1) {
-            final List<dynamic> dataArray = responseData['data_array'];
+        if (responseData['success'] == 1) {
+          final List<dynamic> dataArray = responseData['data_array'];
 
-            setState(() {
-              masjidTiming = List<Map<String, dynamic>>.from(dataArray);
-              _isLoading = false;
-            });
-          } else {
-            print('API returned an error: ${responseData['message']}');
-          }
+          setState(() {
+            masjidTiming = List<Map<String, dynamic>>.from(dataArray);
+            _isLoading = false;
+          });
         } else {
-          print('Failed to load data from API');
+          print('API returned an error: ${responseData['message']}');
         }
       } else {
-        print('Token not found in SharedPreferences');
+        print('Failed to load data from API');
       }
-    } catch (error) {
+        } catch (error) {
       print('Error fetching data: $error');
     }
   }

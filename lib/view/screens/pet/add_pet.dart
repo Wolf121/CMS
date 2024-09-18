@@ -1082,23 +1082,21 @@ class _AddPetState extends State<AddPet> {
                                                             child: child!,
                                                           );
                                                         });
-                                                if (date != null) {
-                                                  // Update _dateSubActual with the selected date
-                                                  setState(() {
-                                                    _dateBirthActual =
-                                                        formatDate(date, [
-                                                      yyyy,
-                                                      '-',
-                                                      mm,
-                                                      '-',
-                                                      dd
-                                                    ]);
-                                                  });
+                                                // Update _dateSubActual with the selected date
+                                                setState(() {
+                                                  _dateBirthActual =
+                                                      formatDate(date!, [
+                                                    yyyy,
+                                                    '-',
+                                                    mm,
+                                                    '-',
+                                                    dd
+                                                  ]);
+                                                });
 
-                                                  // Update the ValueNotifier with the selected date
-                                                  dateSub.value = date;
-                                                }
-                                              },
+                                                // Update the ValueNotifier with the selected date
+                                                dateSub.value = date;
+                                                                                            },
                                               child: PickDate(
                                                 date: dateVal != null
                                                     ? formatDate(dateVal, [
@@ -1157,23 +1155,21 @@ class _AddPetState extends State<AddPet> {
                                                             child: child!,
                                                           );
                                                         });
-                                                if (date != null) {
-                                                  // Update _dateSubActual with the selected date
-                                                  setState(() {
-                                                    _dateSubActual = formatDate(
-                                                        date, [
-                                                      yyyy,
-                                                      '-',
-                                                      mm,
-                                                      '-',
-                                                      dd
-                                                    ]);
-                                                  });
+                                                // Update _dateSubActual with the selected date
+                                                setState(() {
+                                                  _dateSubActual = formatDate(
+                                                      date!, [
+                                                    yyyy,
+                                                    '-',
+                                                    mm,
+                                                    '-',
+                                                    dd
+                                                  ]);
+                                                });
 
-                                                  // Update the ValueNotifier with the selected date
-                                                  dateofBirth.value = date;
-                                                }
-                                              },
+                                                // Update the ValueNotifier with the selected date
+                                                dateofBirth.value = date;
+                                                                                            },
                                               child: PickDate(
                                                 date: dateVal != null
                                                     ? formatDate(dateVal, [

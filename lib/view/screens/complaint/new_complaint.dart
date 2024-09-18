@@ -470,7 +470,7 @@ class _NewComplaintState extends State<NewComplaint> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? storedData = prefs.getString('chatagoriDataArray');
 
-    if (storedData != null && storedData.isNotEmpty) {
+    if (storedData!.isNotEmpty) {
       // Parse the stored data
       List<dynamic> storedList = jsonDecode(storedData);
 

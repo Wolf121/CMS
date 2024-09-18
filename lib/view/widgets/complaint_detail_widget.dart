@@ -130,12 +130,6 @@ class _CompalintDetailWidgetState extends State<CompalintDetailWidget> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? token = prefs.getString('token');
 
-    if (token == null) {
-      // Handle the case where the token is not available
-      print('Token not found in SharedPreferences');
-      return;
-    }
-
     // API endpoint URL
     final apiUrl = 'http://110.93.244.74/api/complaint/complaint_resolved';
 
@@ -276,12 +270,6 @@ class _CompalintDetailWidgetState extends State<CompalintDetailWidget> {
     // Retrieve the token from shared preferences
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? token = prefs.getString('token');
-
-    if (token == null) {
-      // Handle the case where the token is not available
-      print('Token not found in SharedPreferences');
-      return;
-    }
 
     // API endpoint URL
     final apiUrl = 'http://110.93.244.74/api/complaint/complaint_feedback';
@@ -557,32 +545,31 @@ class _CompalintDetailWidgetState extends State<CompalintDetailWidget> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: [
-                                  GroupButton(
-                                    isRadio: true,
-                                    onSelected: (index, isSelected) {
-                                      status = "$index";
-                                    },
-                                    direction: Axis.horizontal,
-                                    spacing: 5,
-                                    // controller: controller,
-                                    selectedColor: appcolor,
-                                    unselectedBorderColor: appcolor,
-                                    selectedTextStyle: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 14,
-                                      color: dfColor,
-                                    ),
-                                    unselectedTextStyle: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 14,
-                                      color: appcolor,
-                                    ),
-                                    buttons: [
-                                      "Yes",
-                                      "Partially",
-                                      "No",
-                                    ],
-                                  )
+                                 GroupButton(
+  isRadio: true, // Use 'GroupButtonType.radio' for the updated version
+  onSelected: (value, index, isSelected) {
+    status = "$index";
+  },
+  buttons: const ["Yes", "Partially", "No"],
+  options: GroupButtonOptions(
+    direction: Axis.horizontal,
+    spacing: 5,
+    selectedColor: appcolor,
+    unselectedBorderColor: appcolor,
+    selectedTextStyle: const TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 14,
+      color: dfColor,
+    ),
+    unselectedTextStyle: const TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 14,
+      color: appcolor,
+    ),
+  ),
+)
+
+                                
                                 ],
                               ),
                             )

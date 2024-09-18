@@ -1148,10 +1148,10 @@ class _LogInState extends State<LogIn> {
                                                         ResetPassword()));
                                           },
                                           style: ButtonStyle(
-                                            padding: MaterialStatePropertyAll(
+                                            padding: WidgetStatePropertyAll(
                                                 EdgeInsets.zero),
                                             minimumSize:
-                                                MaterialStatePropertyAll(
+                                                WidgetStatePropertyAll(
                                                     Size(10, 0)),
                                             tapTargetSize: MaterialTapTargetSize
                                                 .shrinkWrap,
@@ -1200,10 +1200,10 @@ class _LogInState extends State<LogIn> {
                                               );
                                             },
                                             style: ButtonStyle(
-                                              padding: MaterialStatePropertyAll(
+                                              padding: WidgetStatePropertyAll(
                                                   EdgeInsets.zero),
                                               minimumSize:
-                                                  MaterialStatePropertyAll(
+                                                  WidgetStatePropertyAll(
                                                       Size(10, 0)),
                                               tapTargetSize:
                                                   MaterialTapTargetSize
@@ -1388,10 +1388,10 @@ class _LogInState extends State<LogIn> {
                                                 },
                                                 style: ButtonStyle(
                                                   padding:
-                                                      MaterialStatePropertyAll(
+                                                      WidgetStatePropertyAll(
                                                           EdgeInsets.zero),
                                                   minimumSize:
-                                                      MaterialStatePropertyAll(
+                                                      WidgetStatePropertyAll(
                                                           Size(10, 0)),
                                                   tapTargetSize:
                                                       MaterialTapTargetSize
